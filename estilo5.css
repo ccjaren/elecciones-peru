@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f4f4f4;
+    color: #1a1a1a;
+}
+
+/* ── Header ── */
+header {
+    background: #c0392b;
+    color: #fff;
+    padding: 1.5rem 2rem;
+    text-align: center;
+    border-bottom: 4px solid #922b21;
+}
+
+header h1 {
+    font-size: 1.6rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+}
+
+/* ── Navegación ── */
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.75rem;
+    font-weight: 500;
+    padding: 6px 14px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 20px;
+    transition: background 0.2s;
+}
+
+nav a:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+/* ── Grid de tarjetas ── */
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    padding: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* ── Tarjeta ── */
+.card {
+    background: #ffffff;
+    border-radius: 12px;
+    border: 1px solid #e0e0e0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.card h2 {
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 1rem 1.25rem 0.5rem;
+    color: #1a1a1a;
+}
+
+/* ── Imagen ── */
+.img-container {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    background: #f0f0f0;
+}
+
+.img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* ── Badge de estado ── */
+.status-blue {
+    margin: 0.75rem 1.25rem 0.5rem;
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: #185FA5;
+    background: #E6F1FB;
+    padding: 5px 12px;
+    border-radius: 20px;
+    display: inline-block;
+    width: fit-content;
+}
+
+/* ── Lista ── */
+.card ul {
+    list-style: none;
+    padding: 0.5rem 1.25rem 1.25rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.card ul li {
+    font-size: 0.82rem;
+    color: #555;
+    padding-left: 14px;
+    position: relative;
+    line-height: 1.5;
+}
+
+.card ul li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 7px;
+    width: 5px;
+    height: 5px;
+    background: #c0392b;
+    border-radius: 50%;
+}

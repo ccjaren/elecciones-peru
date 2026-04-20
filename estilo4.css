@@ -1,0 +1,117 @@
+/* Configuración General */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #003366; /* Azul oscuro institucional */
+    border-bottom: 3px solid #d9534f; /* Detalle en rojo */
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+}
+
+/* Estilo para la Lista */
+ul {
+    background: #fff;
+    padding: 20px 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    max-width: 800px;
+    margin: 0 auto 40px auto;
+    column-count: 2; /* Divide la lista en dos columnas */
+}
+
+ul li {
+    margin-bottom: 8px;
+    font-size: 0.9em;
+    color: #555;
+}
+
+/* Estilo para la Tabla */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden; /* Para que las esquinas redondeadas funcionen */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    margin-bottom: 50px;
+}
+
+thead {
+    background-color: #003366;
+    color: white;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Estilo para las imágenes */
+table img {
+    border-radius: 50%; /* Fotos circulares */
+    object-fit: cover;
+    border: 2px solid #003366;
+    transition: transform 0.3s;
+}
+
+table img:hover {
+    transform: scale(1.2); /* Efecto de zoom al pasar el mouse */
+}
+
+/* Filas alternas para mejor lectura */
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tbody tr:hover {
+    background-color: #f1f1f1;
+    transition: 0.3s;
+}
+
+/* Columna CV con estilo de etiqueta */
+td:last-child {
+    font-weight: bold;
+    color: #d9534f;
+}
+
+/* Responsivo: para que se vea bien en celulares */
+@media (max-width: 600px) {
+    ul {
+        column-count: 1;
+    }
+    
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+    
+    thead tr {
+        display: none;
+    }
+    
+    tr {
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+    }
+    
+    td {
+        text-align: right;
+        position: relative;
+        padding-left: 50%;
+    }
+    
+    td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 10px;
+        font-weight: bold;
+        text-align: left;
+    }
+}
